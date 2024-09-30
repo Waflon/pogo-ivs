@@ -7,16 +7,16 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+#credenciales de twilio para poder enviar wzps, puede omitirse si solo quieren scrapear la página
 account_sid = os.getenv('SID')
 auth_token = os.getenv('TOKEN')
 twilio_numero = os.getenv('TWILIO_NUMERO')
 mi_numero = os.getenv('MI_NUMERO')
 client = Client(account_sid, auth_token)
 
-url = "https://moonani.com/PokeList/index.php"
+url = "https://moonani.com/PokeList/index.php"  #pagina donde estoy extrayendo la info
 
-lista = []
-coor_nunoa = {
+coor_nunoa = {  #coordenadas reales de ñuñoa
     'norte': -33.44,
     'sur': -33.47,
     'oeste': -70.63,
